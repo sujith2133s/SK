@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d47a1;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clickable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.clickable:active {
+  transform: scale(0.97);
+}
