@@ -1,17 +1,17 @@
 <nav class="navbar">
-  <div class="logo">SK Insurance Advisory</div>
+  <div class="logo">
+    <span class="logo-icon">🛡️</span>
+    <span class="logo-text">SK <span>Insurance Advisory</span></span>
+  </div>
   <div class="menu">
-    <a routerLink="/">Home</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/services">Services</a>
-    <a routerLink="/contact">Contact</a>
+    <a routerLink="/" class="nav-link">Home</a>
+    <a routerLink="/about" class="nav-link">About</a>
+    <a routerLink="/services" class="nav-link">Services</a>
+    <a routerLink="/blogs" class="nav-link">Blogs</a>
+    <a routerLink="/contact" class="nav-link nav-contact">Contact</a>
   </div>
 </nav>
 
 <div class="container">
   <router-outlet></router-outlet>
-</div>
-<div class="card clickable">
-  <h3>Life Insurance</h3>
-  <p>Secure your family’s future with reliable life insurance plans.</p>
 </div>
