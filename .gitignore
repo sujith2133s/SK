@@ -42,3 +42,16 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Visual Studio
+.vs/
+**/.vs/
+
+# .NET build folders
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Logs
+*.log
