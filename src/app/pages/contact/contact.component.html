@@ -1,19 +1,170 @@
-<h2>Contact Us</h2>
+<div class="contact-wrap">
 
-<p><strong>Name:</strong> Sujith Kumar</p>
-<p><strong>Phone:</strong> +91-9994738638</p>
-<p><strong>WhatsApp:</strong> +91-9445525225</p>
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="ch-blob ch-blob1"></div>
+    <div class="ch-blob ch-blob2"></div>
+    <div class="ch-inner">
+      <span class="section-tag">Contact Us</span>
+      <h1>Let's Talk – <span class="ch-highlight">We're Here For You</span></h1>
+      <p>Reach out anytime. We respond quickly and are always happy to help you find the right plan.</p>
+    </div>
+  </section>
 
-<h3>Send Enquiry</h3>
-<form>
-  <label>Name</label><br />
-  <input type="text" placeholder="Your Name" /><br /><br />
+  <div class="contact-page-inner">
 
-  <label>Phone</label><br />
-  <input type="text" placeholder="Your Phone" /><br /><br />
+    <!-- Quick Contact Cards -->
+    <div class="quick-cards">
+      <a href="tel:+919994738638" class="qcard qcard-call">
+        <div class="qcard-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+        </div>
+        <div class="qcard-info">
+          <span class="qcard-label">Call Now</span>
+          <strong>+91-9994738638</strong>
+          <small>Available 9 AM – 7 PM</small>
+        </div>
+        <div class="qcard-arrow">→</div>
+      </a>
 
-  <label>Message</label><br />
-  <textarea placeholder="Your Message"></textarea><br /><br />
+      <a href="https://wa.me/919445525225" target="_blank" class="qcard qcard-wa">
+        <div class="qcard-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
+        </div>
+        <div class="qcard-info">
+          <span class="qcard-label">WhatsApp Chat</span>
+          <strong>+91-9445525225</strong>
+          <small>Typically replies in minutes</small>
+        </div>
+        <div class="qcard-arrow">→</div>
+      </a>
+    </div>
 
-  <button type="submit">Send</button>
-</form>
+    <!-- Form + Info Row -->
+    <div class="contact-main">
+
+      <!-- Enquiry Form -->
+      <div class="enquiry-form-card">
+        <h3>📋 Send an Enquiry</h3>
+        <p>Fill in your details and we'll call you back within 24 hours — free of charge.</p>
+        <form class="enquiry-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" name="name" ngModel required placeholder="e.g. Ramesh Kumar" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" ngModel required placeholder="+91-XXXXXXXXXX" class="form-input" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Interested In</label>
+            <select name="interest" ngModel class="form-input">
+              <option value="">Select a plan...</option>
+              <option>Life Insurance (LIC)</option>
+              <option>Health Insurance (Star Health)</option>
+              <option>Savings & Investment Plans</option>
+              <option>Claim Assistance</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea name="message" ngModel rows="4" placeholder="Tell us what you're looking for..."
+              class="form-input form-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+            Send Enquiry
+          </button>
+          <p class="form-note">🔒 Your information is safe and never shared.</p>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info-panel">
+        <div class="info-header">
+          <!-- Cute cartoon phone character -->
+          <svg viewBox="0 0 160 200" width="160" height="200" class="contact-cartoon">
+            <!-- Body (phone shape) -->
+            <rect x="40" y="40" width="80" height="130" rx="16" fill="#1a56db" />
+            <rect x="46" y="55" width="68" height="90" rx="8" fill="#fff" fill-opacity="0.95" />
+            <!-- Screen content: wave -->
+            <path d="M50 90 Q62 70 80 90 Q98 110 110 90" stroke="#1a56db" stroke-width="3" fill="none"
+              stroke-linecap="round" />
+            <!-- Wifi bars -->
+            <rect x="72" y="100" width="4" height="20" rx="2" fill="#10b981" />
+            <rect x="80" y="93" width="4" height="27" rx="2" fill="#10b981" />
+            <rect x="88" y="86" width="4" height="34" rx="2" fill="#10b981" />
+            <!-- Home button -->
+            <circle cx="80" cy="158" r="7" fill="rgba(255,255,255,0.3)" />
+            <!-- Speaker -->
+            <rect x="66" y="46" width="28" height="5" rx="2.5" fill="rgba(255,255,255,0.3)" />
+            <!-- Hands -->
+            <ellipse cx="28" cy="120" rx="14" ry="12" fill="#FBBF7A" />
+            <ellipse cx="132" cy="115" rx="14" ry="12" fill="#FBBF7A" />
+            <!-- Face at top -->
+            <circle cx="80" cy="26" r="20" fill="#FBBF7A" />
+            <circle cx="74" cy="24" r="3" fill="#1e293b" />
+            <circle cx="86" cy="24" r="3" fill="#1e293b" />
+            <path d="M74 33 Q80 39 86 33" stroke="#92400e" stroke-width="2.5" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-ico" style="background:#dbeafe;color:#1a56db;">👤</div>
+            <div>
+              <span class="info-label">Advisor</span>
+              <strong>Sujith Kumar</strong>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico" style="background:#dcfce7;color:#10b981;">📞</div>
+            <div>
+              <span class="info-label">Call</span>
+              <strong><a href="tel:+919994738638">+91-9994738638</a></strong>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico" style="background:#dcfce7;color:#25d366;">💬</div>
+            <div>
+              <span class="info-label">WhatsApp</span>
+              <strong><a href="https://wa.me/919445525225" target="_blank">+91-9445525225</a></strong>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico" style="background:#fef3c7;color:#d97706;">🏢</div>
+            <div>
+              <span class="info-label">Services</span>
+              <strong>LIC & Star Health Insurance</strong>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico" style="background:#ede9fe;color:#7c3aed;">🕐</div>
+            <div>
+              <span class="info-label">Hours</span>
+              <strong>Mon – Sat, 9 AM – 7 PM</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <a href="tel:+919994738638" class="btn btn-primary" style="width:100%;justify-content:center;">📞 Call Now</a>
+          <a href="https://wa.me/919445525225" target="_blank" class="btn btn-whatsapp"
+            style="width:100%;justify-content:center;margin-top:10px;">💬 Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
