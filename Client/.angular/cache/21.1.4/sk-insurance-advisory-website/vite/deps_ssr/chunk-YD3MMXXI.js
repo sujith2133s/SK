@@ -4,14 +4,14 @@ import {
   ROUTES,
   Router,
   loadChildren
-} from "./chunk-HCIQDTGL.js";
+} from "./chunk-WRC7SUI3.js";
 import {
   BrowserDomAdapter,
   BrowserModule,
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin,
   HTTP_ROOT_INTERCEPTOR_FNS
-} from "./chunk-OO7OQL2Y.js";
+} from "./chunk-X54C2FEZ.js";
 import {
   APP_BASE_HREF,
   NullViewportScroller,
@@ -21,7 +21,7 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
-} from "./chunk-FFIBBXP4.js";
+} from "./chunk-E2WHJEEJ.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -67,7 +67,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-MOIXEZBV.js";
+} from "./chunk-CRQL2VSW.js";
 import {
   __objRest,
   __spreadProps,
@@ -16425,7 +16425,7 @@ var ServerXhr = class _ServerXhr {
     if (!this.xhrImpl) {
       const {
         default: xhr
-      } = await import("./xhr2-4VDN2AEZ.js");
+      } = await import("./xhr2-ZCJDNXIO.js");
       this.xhrImpl = xhr;
     }
   }
@@ -28353,4 +28353,4 @@ export {
   AngularAppEngine,
   createRequestHandler
 };
-//# sourceMappingURL=chunk-IAPB5PJO.js.map
+//# sourceMappingURL=chunk-YD3MMXXI.js.map
