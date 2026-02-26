@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CardService } from '../../../services/card.service';
+import { WebsocketService } from '../../../services/websocket.service';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +12,13 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
   isLicFormOpen = false;
 
+
+  constructor(private cardService: CardService, private ws: WebsocketService) {}
+
+  ngOnInit(): void{
+    this.getRecord();
+      this.ws.connect();
+  }
   openLicForm(event: Event) {
     event.preventDefault();
     this.isLicFormOpen = true;
@@ -31,5 +40,11 @@ export class HomeComponent {
 
     form.reset();
     this.closeLicForm();
+  }
+
+  getRecord() : void {
+      this.cardService.getAllType().subscribe(data => {
+        console.log("Data Type", data);
+      });
   }
 }
