@@ -1,19 +1,73 @@
-<h2>Contact Us</h2>
+<div class="contact-container">
 
-<p><strong>Name:</strong> Sujith Kumar</p>
-<p><strong>Phone:</strong> +91-9994738638</p>
-<p><strong>WhatsApp:</strong> +91-9445525225</p>
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>Have questions about your insurance needs? We are here to help you secure a better future.</p>
+    </div>
+  </section>
 
-<h3>Send Enquiry</h3>
-<form>
-  <label>Name</label><br />
-  <input type="text" placeholder="Your Name" /><br /><br />
+  <!-- Contact Details & Form Section -->
+  <section class="contact-main">
+    <div class="contact-wrapper">
 
-  <label>Phone</label><br />
-  <input type="text" placeholder="Your Phone" /><br /><br />
+      <!-- Contact Information Cards -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p class="info-desc">Reach out to us directly or drop a message below.</p>
 
-  <label>Message</label><br />
-  <textarea placeholder="Your Message"></textarea><br /><br />
+        <div class="info-card">
+          <div class="icon">📞</div>
+          <div class="details">
+            <h4>Phone</h4>
+            <p><a href="tel:+919994738638" class="contact-link">+91-9994738638</a></p>
+          </div>
+        </div>
 
-  <button type="submit">Send</button>
-</form>
+        <div class="info-card">
+          <div class="icon">💬</div>
+          <div class="details">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/919445525225" target="_blank" class="contact-link">+91-9445525225</a></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">👤</div>
+          <div class="details">
+            <h4>Advisor</h4>
+            <p>Sujith Kumar</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h2>Send us an Enquiry</h2>
+        <form class="contact-form" (submit)="onSubmit($event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="e.g. +91 9876543210" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Send Message <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</div>

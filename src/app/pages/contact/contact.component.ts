@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-
+  onSubmit(event: Event) {
+    event.preventDefault();
+    // Logic for form submission goes here
+    alert('Thank you for reaching out! We will get back to you shortly.');
+  }
 }
