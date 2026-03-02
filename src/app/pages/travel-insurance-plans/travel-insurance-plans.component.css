@@ -1,0 +1,46 @@
+.plans-hero { background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1e88e5 100%); color: #fff; padding: 56px 40px 72px; position: relative; }
+.plans-hero::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 50px; background: #f0f4ff; clip-path: ellipse(55% 100% at 50% 100%); }
+.plans-hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+.back-link { display: inline-block; color: rgba(255,255,255,0.9); font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+.back-link:hover { color: #fff; }
+.section-tag { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #e3f2fd; font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
+.plans-hero h1 { font-size: 2.4rem; font-weight: 800; margin: 0 0 14px; }
+.hero-sub { font-size: 1rem; color: #bbdefb; line-height: 1.7; }
+.plans-section { background: #f0f4ff; padding: 72px 40px 80px; }
+.plans-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.plan-card { background: #fff; border-radius: 14px; padding: 28px 26px; border: 1px solid #e8eef8; box-shadow: 0 2px 12px rgba(21,101,192,0.07); transition: transform 0.25s, box-shadow 0.25s, border-color 0.22s; animation: cardReveal 0.5s ease calc(var(--delay,0s)) both; }
+.plan-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(21,101,192,0.12); border-color: #90caf9; }
+@keyframes cardReveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.plan-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #1565c0; color: #fff; font-size: 16px; font-weight: 800; border-radius: 10px; margin-bottom: 16px; }
+.plan-card h2 { font-size: 1.2rem; font-weight: 800; color: #1a2e4a; margin: 0 0 12px; }
+.plan-desc { font-size: 0.92rem; color: #64748b; line-height: 1.65; margin: 0 0 14px; }
+.plan-benefits { list-style: none; padding: 0; margin: 0 0 20px; }
+.plan-benefits li { font-size: 0.85rem; color: #475569; padding: 4px 0; font-weight: 500; }
+.btn-get-details { display: inline-block; padding: 10px 22px; background: #1565c0; color: #fff; font-size: 13.5px; font-weight: 700; border: none; border-radius: 7px; cursor: pointer; transition: background 0.2s, transform 0.18s, box-shadow 0.2s; box-shadow: 0 3px 10px rgba(21,101,192,0.3); }
+.btn-get-details:hover { background: #0d47a1; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(21,101,192,0.4); }
+.plans-cta { background: #fff; padding: 72px 40px; text-align: center; border-top: 1px solid #e8eef8; }
+.plans-cta-inner { max-width: 600px; margin: 0 auto; }
+.plans-cta h2 { font-size: 1.8rem; font-weight: 800; color: #1a2e4a; margin-bottom: 12px; }
+.plans-cta p { font-size: 1rem; color: #64748b; margin-bottom: 28px; line-height: 1.65; }
+.cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.btn-call { display: inline-block; padding: 12px 26px; background: #1565c0; color: #fff; font-size: 14px; font-weight: 700; border-radius: 7px; text-decoration: none; }
+.btn-call:hover { background: #0d47a1; transform: translateY(-2px); }
+.btn-wa { display: inline-block; padding: 12px 26px; background: #25d366; color: #fff; font-size: 14px; font-weight: 700; border-radius: 7px; text-decoration: none; }
+.btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); }
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 9999; }
+.modal { background: #fff; border-radius: 16px; padding: 32px 36px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,0.25); }
+.modal-close { position: absolute; top: 16px; right: 20px; width: 36px; height: 36px; background: #f1f5f9; border: none; border-radius: 50%; font-size: 22px; cursor: pointer; color: #64748b; }
+.modal-close:hover { background: #e2e8f0; color: #1a2e4a; }
+.modal h3 { font-size: 1.35rem; font-weight: 800; color: #1a2e4a; margin: 0 0 16px; padding-right: 44px; }
+.modal-desc { font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 18px; }
+.modal-features { list-style: none; padding: 0; margin: 0 0 24px; }
+.modal-features li { font-size: 0.9rem; color: #374151; padding: 6px 0; }
+.modal-cta { padding-top: 20px; border-top: 1px solid #e8eef8; }
+.cta-label { font-size: 0.9rem; font-weight: 600; color: #1a2e4a; margin-bottom: 14px; }
+.modal-cta .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-call-modal { flex: 1; min-width: 140px; padding: 12px 20px; background: #1565c0; color: #fff; font-size: 14px; font-weight: 700; border: none; border-radius: 7px; cursor: pointer; }
+.btn-call-modal:hover { background: #0d47a1; transform: translateY(-2px); }
+.btn-wa-modal { flex: 1; min-width: 140px; padding: 12px 20px; background: #25d366; color: #fff; font-size: 14px; font-weight: 700; border: none; border-radius: 7px; cursor: pointer; }
+.btn-wa-modal:hover { background: #1ebe5d; transform: translateY(-2px); }
+@media (max-width: 700px) { .plans-inner { grid-template-columns: 1fr; } .plans-hero h1 { font-size: 2rem; } .plans-section { padding: 56px 20px; } }
+@media (max-width: 480px) { .plans-hero { padding: 44px 20px 64px; } .modal { padding: 24px; } }

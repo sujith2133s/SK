@@ -1,0 +1,44 @@
+<section class="plans-hero">
+  <div class="plans-hero-inner">
+    <a routerLink="/services" class="back-link">← Back to Services</a>
+    <p class="section-tag">Wealth Builder</p>
+    <h1>Savings &amp; Investment Plans</h1>
+    <p class="hero-sub">Insurance-linked savings — ULIPs, endowment, money-back, child plans, pension, and guaranteed returns.</p>
+  </div>
+</section>
+<section class="plans-section">
+  <div class="plans-inner">
+    <div class="plan-card" *ngFor="let plan of plans; let i = index" [style.--delay]="(0.06 * (i + 1)) + 's'">
+      <div class="plan-number">{{ plan.id }}</div>
+      <h2>{{ plan.name }}</h2>
+      <p class="plan-desc">{{ plan.shortDesc }}</p>
+      <ul class="plan-benefits"><li *ngFor="let b of plan.benefits">✓ {{ b }}</li></ul>
+      <button type="button" class="btn-get-details" (click)="openDetails(plan)">Get Details</button>
+    </div>
+  </div>
+</section>
+<section class="plans-cta">
+  <div class="plans-cta-inner">
+    <h2>Need Help Choosing a Plan?</h2>
+    <p>Our advisor will compare plans and help you build wealth — free consultation.</p>
+    <div class="cta-btns">
+      <a href="tel:+91-9445525225" class="btn-call">📞 Call for Enquiry</a>
+      <a href="https://wa.me/919445525225" target="_blank" class="btn-wa">💬 WhatsApp Enquiry</a>
+    </div>
+  </div>
+</section>
+<div class="modal-overlay" *ngIf="isModalOpen && selectedPlan" (click)="closeModal()" role="button" tabindex="0">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button type="button" class="modal-close" (click)="closeModal()" aria-label="Close">×</button>
+    <h3>{{ selectedPlan!.name }}</h3>
+    <p class="modal-desc">{{ selectedPlan!.fullDesc }}</p>
+    <ul class="modal-features"><li *ngFor="let f of selectedPlan!.features">✔ {{ f }}</li></ul>
+    <div class="modal-cta">
+      <p class="cta-label">Get a free quote — Call or WhatsApp our advisor</p>
+      <div class="cta-buttons">
+        <button type="button" class="btn-call-modal" (click)="onCall()">📞 Call Now</button>
+        <button type="button" class="btn-wa-modal" (click)="onWhatsApp()">💬 WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>

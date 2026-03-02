@@ -209,29 +209,82 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #1a2e4a;
-  margin: 0 0 44px;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0 0 48px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
-.service-card {
+/* ── White cards ── */
+.service-card-white {
   background: #ffffff;
-  border-radius: 14px;
-  padding: 32px 24px 28px;
+  border-radius: 16px;
+  padding: 32px 26px 28px;
   text-align: left;
-  box-shadow: 0 2px 12px rgba(21, 101, 192, 0.07);
+  box-shadow: 0 2px 16px rgba(21, 101, 192, 0.08);
   border: 1px solid #e8eef8;
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.28s ease,
+              border-color 0.22s ease;
+  animation: cardReveal 0.5s ease calc(var(--delay, 0s)) both;
+  cursor: default;
+}
+
+/* ── Highlighted (blue) card ── */
+.service-card-highlight {
+  background: linear-gradient(180deg, #0d47a1 0%, #1565c0 100%);
+  border-radius: 16px;
+  padding: 40px 26px 28px;
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(21, 101, 192, 0.35);
+  border: none;
+  position: relative;
+  color: #fff;
   transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.28s ease;
   animation: cardReveal 0.5s ease calc(var(--delay, 0s)) both;
   cursor: default;
+}
+
+.service-card-highlight h3,
+.service-card-highlight p {
+  color: #fff;
+}
+
+.service-card-highlight p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.most-popular {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: #ff8c00;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 6px 14px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.4);
 }
 
 @keyframes cardReveal {
@@ -239,43 +292,113 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.service-card:hover {
+.service-card-white:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(21, 101, 192, 0.14);
+  box-shadow: 0 20px 48px rgba(21, 101, 192, 0.14);
   border-color: #90caf9;
 }
 
+.service-card-highlight:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(21, 101, 192, 0.4);
+}
+
+/* ── Card icons (pastel backgrounds) ── */
 .card-icon {
-  font-size: 36px;
-  margin-bottom: 16px;
-  display: inline-block;
-  background: #e8f0fe;
-  width: 60px;
-  height: 60px;
+  font-size: 34px;
+  margin-bottom: 18px;
+  width: 64px;
+  height: 64px;
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: transform 0.22s ease;
 }
 
-.service-card:hover .card-icon {
-  background: #1565c0;
-  transform: scale(1.1);
+.card-icon-blue {
+  background: #e3f2fd;
+}
+
+.card-icon-green {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card-icon-yellow {
+  background: #fff8e1;
+}
+
+.service-card-white:hover .card-icon {
+  transform: scale(1.08);
+}
+
+.service-card-highlight:hover .card-icon {
+  transform: scale(1.08);
 }
 
 .service-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #1a2e4a;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+  line-height: 1.3;
 }
 
-.service-card p {
+.service-card-white p,
+.service-card-highlight p {
   font-size: 0.9rem;
-  color: #64748b;
   line-height: 1.65;
-  margin: 0;
+  margin: 0 0 18px;
+}
+
+.service-card-white p {
+  color: #64748b;
+}
+
+/* ── Feature pills ── */
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.feature-pills .pill {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.feature-pills-light .pill {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ── Get This Plan link ── */
+.card-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1565c0;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.18s ease;
+}
+
+.card-link:hover {
+  color: #0d47a1;
+  transform: translateX(4px);
+}
+
+.card-link-orange {
+  color: #ff8c00;
+}
+
+.card-link-orange:hover {
+  color: #ffb347;
 }
 
 
