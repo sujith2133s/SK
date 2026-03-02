@@ -14,7 +14,13 @@
   align-items: center;
   overflow: hidden;
 }
-
+ .nav-cta-btn {
+    margin: 8px 0 4px;
+    text-align: center;
+    padding: 12px 20px;
+    color: #000000;
+    background-color: #1039a8;
+  }
 .hero-blob {
   position: absolute;
   border-radius: 50%;
@@ -367,6 +373,166 @@
 
 .featured-cta {
   color: #fbbf24 !important;
+}
+
+/* --- LIC Enquiry Form Modal --- */
+.lic-form-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 32px 16px;
+}
+
+.lic-form-backdrop.is-open {
+  display: flex;
+}
+
+.lic-form-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 520px;
+  width: 100%;
+  padding: 28px 26px 32px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
+  position: relative;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lic-form-modal h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.lic-form-modal p {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.lic-form-body {
+  margin-top: 8px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.lic-form-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.lic-form-close:hover {
+  color: #0f172a;
+}
+
+.lic-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.lic-form-row label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.lic-form-row input,
+.lic-form-row select,
+.lic-form-row textarea {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.lic-form-row input:focus,
+.lic-form-row select:focus,
+.lic-form-row textarea:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 1px rgba(26, 86, 219, 0.1);
+}
+
+.lic-radio-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  color: #475569;
+}
+
+.lic-radio-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lic-form-submit {
+  width: 70%;
+  margin-top: 8px;
+  justify-content: center;
+  margin-left: 17%;
+}
+
+.submit-btn{
+  width: 36%;
+  margin-top: 8px;
+  justify-content: right;
+  margin-left: 28%;
+  height: 10%;
+}
+
+.btn-color{
+  background-color: #fbbf24 !important;
+}
+
+/* Responsive tweaks for LIC modal */
+@media (max-width: 640px) {
+  .lic-form-modal {
+    max-width: 100%;
+    padding: 22px 18px 26px;
+    border-radius: 16px;
+  }
+
+  .lic-form-modal h3 {
+    font-size: 1.1rem;
+  }
+
+  .lic-form-modal p {
+    font-size: 0.9rem;
+  }
+
+  .lic-form-row label {
+    font-size: 0.85rem;
+  }
+
+  .lic-form-row input,
+  .lic-form-row select,
+  .lic-form-row textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lic-form-modal {
+    max-width: 540px;
+  }
 }
 
 /* --- Why Section --- */

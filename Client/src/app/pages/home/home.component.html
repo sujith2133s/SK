@@ -184,7 +184,8 @@
             <span>✓ Endowment</span>
             <span>✓ ULIP Plans</span>
           </div>
-          <a href="tel:+919994738638" class="svc-cta">Get This Plan →</a>
+          <a href="tel:+919994738638" class="svc-cta" (click)="openLicForm($event)">Get This Plan →</a>
+          <button type="submit" class="btn btn-primary submit-btn">View Plan</button>
         </div>
 
         <!-- Health Insurance Card -->
@@ -212,7 +213,10 @@
             <span>✓ Family Floater</span>
             <span>✓ Critical Illness</span>
           </div>
-          <a href="tel:+919994738638" class="svc-cta featured-cta">Get This Plan →</a>
+          <a href="tel:+919994738638" class="svc-cta featured-cta" (click)="openLicForm($event)">Get This Plan →</a>
+          <button type="submit" class="btn btn-primary submit-btn btn-accent">View Plan</button>
+        
+          
         </div>
 
         <!-- Savings Card -->
@@ -242,11 +246,107 @@
             <span>✓ Tax Benefits</span>
             <span>✓ Life Cover</span>
           </div>
-          <a href="tel:+919994738638" class="svc-cta">Get This Plan →</a>
+          <a href="tel:+919994738638" class="svc-cta"(click)="openLicForm($event)">Get This Plan →</a>
+          <button type="submit" class="btn btn-primary submit-btn" >View Plan</button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- LIC Enquiry Form Modal -->
+  <div class="lic-form-backdrop" [class.is-open]="isLicFormOpen" (click)="closeLicForm()">
+    <div class="lic-form-modal" (click)="$event.stopPropagation()">
+      <button type="button" class="lic-form-close" (click)="closeLicForm()">×</button>
+      <h3>LIC Plan Enquiry</h3>
+      <p>Please share your details and we will call you back with the best LIC plan options.</p>
+
+      <div class="lic-form-body">
+        <form (submit)="onLicFormSubmit($event)">
+          <div class="lic-form-row">
+            <label for="licName">Name *</label>
+            <input id="licName" name="name" type="text" required />
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licInsurance">Insurance *</label>
+            <select id="licInsurance" name="insurance" required>
+              <option value="">Select Insurance</option>
+              <option value="life_lic">Life Insurance (LIC)</option>
+              <option value="health">Health Insurance</option>
+              <option value="savings_investment">Savings &amp; Investment Plans</option>
+            </select>
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licPlanType">Plan Type *</label>
+            <select id="licPlanType" name="planType" required>
+              <option value="">Select Plan Type</option>
+              <option value="term">Term Plan</option>
+              <option value="endowment">Endowment Plan</option>
+              <option value="ulip">ULIP Plan</option>
+              <option value="money_back">Money Back Plan</option>
+              <option value="not_sure">Not Sure / Need Suggestion</option>
+            </select>
+          </div>
+
+          <div class="lic-form-row">
+            <label>Gender *</label>
+            <div class="lic-radio-group">
+              <label>
+                <input type="radio" name="gender" value="Male" required />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female" />
+                Female
+              </label>
+            </div>
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licType">Member Type *</label>
+            <select id="licType" name="type" required>
+              <option value="">Select Type</option>
+              <option value="individual">Individual</option>
+              <option value="family_floater">Family Floater</option>
+            </select>
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licDob">Date of Birth *</label>
+            <input id="licDob" name="dob" type="date" required />
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licSumAssured">Sum Assured *</label>
+            <select id="licSumAssured" name="sumAssured" required>
+              <option value="">Select Sum Assured</option>
+              <option value="10_lakhs">10 Lakhs</option>
+              <option value="15_lakhs">15 Lakhs</option>
+              <option value="20_lakhs">20 Lakhs</option>
+            </select>
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licPhone">Mobile Number (WhatsApp) *</label>
+            <input id="licPhone" name="phone" type="tel" required />
+          </div>
+
+          <div class="lic-form-row">
+            <label for="licFamilySize">Family Size *</label>
+            <select id="licFamilySize" name="familySize" required>
+              <option value="">Select Family Size</option>
+              <option value="self_spouse_2_child">Self, Spouse with 2 Child</option>
+              <option value="self_spouse_1_child">Self, Spouse with 1 Child</option>
+              <option value="self_spouse">Self &amp; Spouse</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary lic-form-submit">Submit Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- ======== WHY CHOOSE US ======== -->
   <section class="why-section">
