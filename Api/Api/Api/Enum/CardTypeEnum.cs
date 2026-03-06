@@ -9,6 +9,12 @@ namespace Api.Enum
         [Description("Health Insurance")]
         HealthInsurance = 2,
         [Description("Savings Investment")]
-        SavingsInvestment = 3
+        SavingsInvestment = 3,
+
+        [Description("Genaral Insurance")]
+        GenaralInsurance = 4,
+        [Description("Chiled Insurance")]
+        ChiledInsurance = 5
     }
 }
+

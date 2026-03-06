@@ -19,6 +19,15 @@ public enum PlanTypeEnum : byte
         [Description("Tax Benefits")]
         TaxBenefits = 7,
         [Description("Life Cover")]
-        LifeCover = 8
+        LifeCover = 8,
+        [Description("MotorCycle Cover")]
+        MotorCycleCover = 9,
+        [Description("Car Cover")]
+        CarCover = 10,
+        [Description("Education Cover")]
+        EducationCover = 11,
+        [Description("Health Cover")]
+        HealthCover = 12
+
     }
 }

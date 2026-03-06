@@ -375,6 +375,22 @@
   color: #fbbf24 !important;
 }
 
+.service-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.service-page-info {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
 /* --- LIC Enquiry Form Modal --- */
 .lic-form-backdrop {
   position: fixed;
