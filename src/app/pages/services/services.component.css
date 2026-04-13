@@ -42,6 +42,7 @@
 
 .services-hero h1 {
   font-size: 2.6rem;
+  font-family: cursive;
   font-weight: 800;
   margin: 0 0 16px;
   line-height: 1.2;
@@ -50,6 +51,7 @@
 .hero-sub {
   font-size: 1.05rem;
   color: #bbdefb;
+  font-family: cursive;
   line-height: 1.7;
   max-width: 560px;
   margin: 0 auto;
@@ -184,6 +186,7 @@
 
 .service-card-body h2 {
   font-size: 1.35rem;
+  font-family: cursive;
   font-weight: 800;
   color: #1a2e4a;
   margin: 0;
@@ -192,6 +195,7 @@
 
 .service-card-body p {
   font-size: 0.92rem;
+  font-family: cursive;
   color: #475569;
   line-height: 1.7;
   margin: 0;
@@ -209,6 +213,7 @@
 
 .feature-list li {
   font-size: 0.875rem;
+  font-family: cursive;
   color: #374151;
   font-weight: 500;
   display: flex;

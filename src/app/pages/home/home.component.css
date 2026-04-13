@@ -7,7 +7,7 @@
   justify-content: space-between;
   min-height: 520px;
   padding: 72px 80px 72px 80px;
-  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 45%, #1e88e5 100%);
+  background: linear-gradient(135deg, #1e5fc400 0%, #0c305899 50%, #105b9ddb 100%), url(https://wallpapers.com/images/hd/aesthetic-youtube-banner-background-2560-x-1440-vy78ltvvnm467oic.jpg);
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -85,6 +85,7 @@
 .btn {
   display: inline-block;
   padding: 10px 20px;
+  font-family: cursive;
   border-radius: 25px;
   font-size: 14.5px;
   font-weight: 700;
@@ -280,7 +281,7 @@
 
 /* ── White cards ── */
 .service-card-white {
-  background: linear-gradient(180deg, #dc6fca 0%, #1f2832 100%);
+  background: linear-gradient(180deg, #7a97eb 0%, #933faaeb 100%);
   border-radius: 16px;
   padding: 32px 26px 28px;
   text-align: left;
@@ -444,7 +445,7 @@
 }
 
 .card-link:hover {
-  color: #0d47a1;
+  color: #ff8c00;
   transform: translateX(4px);
 }
 
@@ -871,6 +872,7 @@
   background: linear-gradient(135deg, #0d48a119 0%, #1565c02f 50%, #1e88e560 100%), url(https://wallpapers.com/images/hd/dark-theme-background-8xlni5mkdutatc7r.jpg);
   padding: 80px 40px;
   text-align: center;
+  font-family: cursive;
   color: #fff;
 }
 

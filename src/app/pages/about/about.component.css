@@ -6,7 +6,7 @@
 
 /* Hero */
 .about-hero {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+ background: linear-gradient(135deg, #0e3268a6 0%, #000102a8 50%, #0f243745 100%), url(https://t3.ftcdn.net/jpg/02/68/48/86/360_F_268488616_wcoB2JnGbOD2u3bpn2GPmu0KJQ4Ah66T.jpg);
   color: #fff;
   text-align: center;
   padding: 70px 20px;
@@ -183,9 +183,9 @@
 }
 
 /* CTA */
-.about-cta {
-  background: #1976d2;
-  color: #fff;
+ .about-cta {
+  background: linear-gradient(135deg, #0d48a119 0%, #1565c02f 50%, #1e88e560 100%), url(https://wallpapers.com/images/hd/dark-theme-background-8xlni5mkdutatc7r.jpg);
+  color: #ffffff;
   text-align: center;
   padding: 60px 20px;
 }

@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  font-family: cursive;
   align-items: center;
-  background: #1d4e9e;
+  background: linear-gradient(135deg, #1e5fc400 0%, #0c305899 45%, #105b9ddb 100%), url(https://t4.ftcdn.net/jpg/04/67/93/01/360_F_467930159_UcfrOkjhFG436zoT9fSetYccBgpNkokp.jpg);
   padding: 15px 30px;
   color: #fff;
 }
